@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 요소</title>
+</head>
+<body>
+    <!--! HTML 텍스트 요소 -->
+    <!--! p 요소 : 하나의 문단을 표현하는 요소 -->
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Sed nec metus fringilla, luctus libero eu, convallis ex. Phasellus orci felis, vestibulum id elit eu, consequat iaculis tortor.</p>
+
+    <!--? HTML의 태그는 대소문자를 구분하지 않음 -->
+    <!--? W3C에서는 소문자를 권장, XHTML에서는 소문자만 사용 가능-->
+    <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</P>
+
+    <!--? HTML은 문법 오류가 없음 (종료태그를 지정하지 않음) -->
+    <!--? W3C에서는 종료태그 필수 권장, XHTML에서는 반드시 닫아야 함 -->
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. -->
+    
+    <!--? HTML은 <,> 기호로 포함된 문자를 HTML 태그로 인식할 수 있음 -->
+    <!--? < : &lt; / > : &gt; -->
+    <!--? HTML은 기본적으로 띄워쓰기를 한번만 인식 -->
+    <!--? &nbsp; 로 띄워쓰기 강제 표현 가능 -->
+    <!--? HTML은 기본적으로 줄바꿈을 인식하지 않음 -->
+    <!--? <br /> 로 줄바꿈 강제 표현 가능 -->
+    <p>&lt;내&gt;가 그린 기린 그림은 잘 그린 기린 그림이고&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&lt;네&gt;가 그린 기린 그림은 잘 못그린 기린 그림이다.</p>
+
+    <!--내용이 필요없는 요소를 빈요소, 빈요소를 표현하는 태그를 빈태그(단일태그)-->
+    <!--br, hr, img, input, audio, video, ...-->
+    <!--빈요소는 시작태그만 존재함-->
+    <!--W3C에서 빈요소도 닫음 기호를 표현하기를 권장, XHTML에서는 닫음 기호를 필수로 요구-->
+    <!--빈요소의 닫음 표시는 시작태그의 > 기호 앞에 / 를 붙여서 닫음 표시함-->
+    <hr />
+</body>
+</html>
