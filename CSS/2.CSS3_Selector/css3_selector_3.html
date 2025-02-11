@@ -9,48 +9,96 @@
         * { font-size: 24px; }
 
         /* 가상 클래스 선택자 */
-        /*  */
+        /* 요소의 특정한 상태에 따라 선택하고자 할때 사용, CSS 표준에 따라 지정된 상태만 선택 가능 */
 
 
         /* 링크, 동적 선택자 */
-        /* ":link" :  */
+        /* ":link" : 방문하지 않은 링크 선택 */
+        .link:link {
+            color: rgba(0, 0, 0, 0.7);
+        }
 
-        /* ":visited" :  */
+        /* ":visited" : 방문한 링크 선택 */
+        .link:visited {
+            color: rgba(255, 255, 0, 0.7);
+        }
 
-        /* ":hover" :  */
+        /* ":hover" : 요소에 마우스를 올렸을 때 */
+        .action:hover {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
 
-        /* ":active" :  */
+        /* ":active" : 요소를 클리한 상태일 때 */
+        .action:active {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
 
-        /* ":focus" :  */
+        /* ":focus" : 요소에 커서가 맞춰줘 있을 때 */
+        .action:focus {
+            background-color: rgba(0, 255, 0, 0.5);
+        }
 
 
         /* UI 요소 선택자 */
-        /* ":checked" :  */
+        /* ":checked" : 요소가 체크된 상태일 때 */
+        .ui:checked + .label {
+            color: rgba(255, 0, 0, 0.5);
+        }
         
-        /* ":enabled" :  */
+        /* ":enabled" : 요소가 사용 가능한 상태일 때 */
+        .ui:enabled + .label {
+            font-weight: 900;
+        }
 
-        /* ":disabled" :  */
+        /* ":disabled" : 요소가 사용 불가능한 상태일 때 */
+        .ui:disabled + .label {
+            text-decoration: line-through; /* 취소선 표시 */
+        }
 
 
         /* 구조 선택자 */
-        /* ":first-child" :  */
+        /* ":first-child" : 선택자에 해당하는 요소 중 첫번째 형제 요소를 선택 */
+        .structural:first-child {
+            background-color: burlywood;
+        }
         
-        /* ":last-child" :  */
-
+        /* ":last-child" : 선택자에 해당하는 요소 중 마지막 형제 요소를 선택 */
+        .structural:last-child {
+            background-color: cornsilk;
+        }
+        /* n번째 */
+        .structural:nth-child(3) {
+            background-color: coral;
+        }
 
 
         /* 가상 요소 선택자 */
-        /*   */
+        /* 요소의 특정 부분을 선택할 때 사용 */
 
-        /* "::first-letter" :  */
+        /* "::first-letter" : 컨텐츠의 첫 글자 */
+        .pseudo1::first-letter {
+            font-size: 40px;
+        }
 
-        /* "::first-line" :  */
+        /* "::first-line" : 컨텐츠의 첫 줄 */
+        .pseudo1::first-line {
+            color: cadetblue;
+        }
 
-        /* "::after" :  */
+        /* "::after" : 컨텐츠의 뒷부분 선택 */
+        .pseudo2::after {
+            content: '🍰';
+        }
 
-        /* "::before" :  */
+        /* "::before" : 컨텐츠의 앞부분 선택 */
+        .pseudo2::before {
+            content: '🤡 ';
+        }
 
-        /* "::selection" :  */
+        /* "::selection" : 드래그한 컨텐츠를 선택 (브라우저에서 지원 안할 수 있음) */
+        .pseudo2::selection {
+            background-color: rgba(255, 255, 0, 0.5);
+        }
 
     </style>
 </head>
@@ -61,6 +109,7 @@
     <hr />
 
     <div class="action">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+    <a class="action">Action</a>
     <input class="action" />
 
     <hr />
