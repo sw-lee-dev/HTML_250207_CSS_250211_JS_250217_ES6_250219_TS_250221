@@ -27,7 +27,7 @@
     </form>
 
     <form>
-        <!--? minlength, maxlength : 최소, 최대 길이 -->
+        <!--? minlength, maxlength 속성 : 최소, 최대 길이 -->
         <input name="minlength" minlength="4" />
         <input name="maxlength" maxlength="8" />
         <!--? required 속성 : 필수 입력으로 지정하는 속성 -->
@@ -35,47 +35,47 @@
         <button>제출</button>
     </form>
 
-    <!--! type 속성 : 입력칸의 데이터 혹은 입력 방식을 지정하는 속성 -->
-    <!--? text : 기본값, 텍스트의 데이터를 입력할 수 있게 함 -->
+    <!--? type 속성 : 입력칸의 데이터 혹은 입력 방식을 지정하는 속성 -->
+    <!-- text 타입 : 기본값, 텍스트의 데이터를 입력할 수 있게 함 -->
     <input type="text" />
-    <!--? password : 텍스트의 데이터를 입력할 수 있지만 가려져서 표현됨 -->
+    <!-- password 타입 : 텍스트의 데이터를 입력할 수 있지만 가려져서 표현됨 -->
     <input type="password" />
 
-    <!--? 날짜 및 시간과 관련된 타입은 FireFox 브라우저에서는 지원 X -->
-    <!--? date : 날짜를 UI를 통해서 입력 받음 -->
+    <!-- 날짜 및 시간과 관련된 타입은 FireFox 브라우저에서는 지원 X -->
+    <!-- date 타입 : 날짜를 UI를 통해서 입력 받음 -->
     <input type="date" />
-    <!--? time : 시간을 UI를 통해서 입력 받음 -->
+    <!-- time 타입 : 시간을 UI를 통해서 입력 받음 -->
     <input type="time" />
-    <!--? datetime-local : 날짜 및 시간을 UI를 통해서 입력 받음 -->
+    <!-- datetime-local 타입 : 날짜 및 시간을 UI를 통해서 입력 받음 -->
     <input type="datetime-local" />
 
-    <!--? number : 숫자를 입력받는 타입 -->
+    <!-- number 타입 : 숫자를 입력받는 타입 -->
     <input type="number" />
-    <!--? min, max, step -->
+    <!-- min, max, step 타입 -->
     <input type="number" min="0" max="10" step="3" />
-    <!--? range : 숫자를 선택폭의 제한을 주는 타입 -->
+    <!-- range 타입 : 숫자를 선택폭의 제한을 주는 타입 -->
     <input type="range" min="0" max="10" step="2" />
 
-    <!--? file : 파일을 입력할 수 있도록 하는 타입-->
+    <!-- file 타입 : 파일을 입력할 수 있도록 하는 타입-->
     <!--? accept 속성 : 파일 선택의 제한을 줌, 확장자명으로 지정 -->
     <input type="file" accept=".jpeg, .png" />
     <input type="file" accept="image/*, .pdf" />
 
-    <!--? color : 색상을 선택할 수 있도록 하는 타입 -->
+    <!-- color 타입 : 색상을 선택할 수 있도록 하는 타입 -->
     <input type="color" />
 
-    <!--? hidden : 화면에 보이지 않음 -->
+    <!-- hidden 타입 : 화면에 보이지 않음 -->
     숨겨져<input type="hidden" />있음
 
     <form>
         <input name="normal" />
-        <!--? hidden : 사용자에게는 데이터를 보여주지 않고 관리하고 싶을 때 사용 -->
+        <!-- hidden 타입 : 사용자에게는 데이터를 보여주지 않고 관리하고 싶을 때 사용 -->
         <input type="hidden" name="hidden" value="hidden" />
         <button>전송</button>
     </form>
 
-    <!--? checkbox : 주어진 항목 중 다수를 선택하도록 하는 요소 -->
-    <!--? value를 반드시 기입해야함 -->
+    <!-- checkbox 타입 : 주어진 항목 중 다수를 선택하도록 하는 요소 -->
+    <!-- value를 반드시 기입해야함 -->
     <form>
         <input name="skill" type="checkbox" value="java" />Java
         <input name="skill" type="checkbox" value="python" />Python
@@ -85,9 +85,9 @@
         <button>전송</button>
     </form>
 
-    <!--? radio : 주어진 리스트 중에 하나를 선택 -->
-    <!--? name 속성으로 radio 버튼을 그룹화 할 수 있음 -->
-    <!--? 그룹화된 요소들 중 하나만 선택 가능, 선택했다면 그룹화 내에서 취소가 불가능 -->
+    <!-- radio 타입 : 주어진 리스트 중에 하나를 선택 -->
+    <!-- name 속성으로 radio 버튼을 그룹화 할 수 있음 -->
+    <!-- 그룹화된 요소들 중 하나만 선택 가능, 선택했다면 그룹화 내에서 취소가 불가능 -->
     <form>
         <input name="a" type="radio" value="1" checked />1
         <input name="a" type="radio" value="2" />2
@@ -114,7 +114,7 @@
 
     <!--! textarea 요소 : 텍스트를 여러줄에 걸쳐서 작성할 수 있도록 하는 요소 -->
     <!--? textarea는 value 속성을 지정하지 않음 -->
-    <!--? rows, cols 속성: textarea의 기본 크기를 지정할 수 있음 -->
+    <!--? rows, cols 속성 : textarea의 기본 크기를 지정할 수 있음 -->
     <textarea rows="10" cols="4">텍스트아리아의 기본값입니다.</textarea>
 
     <form>
