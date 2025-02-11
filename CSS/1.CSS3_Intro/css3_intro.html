@@ -14,27 +14,33 @@
         CSS 구성요소 : 선택자 { 속성: 값; 속성: 값; ... }
             - 선택자 (selector) : 스타일을 적용하고자 하는 HTML요소를 지정할 때 사용하는 방식
             - 속성 (property) : 선택자로 선택한 HTML요소에 변경할 스타일을 지정하는 것
-            - 갑 (value) : 속성에 적용할 값, 크기 단위나 색상 단위 지정이 대부분
+            - 값 (value) : 속성에 적용할 값, 크기 단위나 색상 단위 지정이 대부분
 
         HTML에 CSS 적용 : 
-            - Inline style : HTML 시작 태그에 style 속성으로 CSS를 작성하는 방법
-            - 
-            - 
-            - 적용 우선순위 : 
+            - Inline style : HTML 시작 태그에 style 속성으로 CSS를 작성하는 방법 >> 특정한 요소에서만 다른 스타일을 적용하고자 할 때 사용되는 스타일
+            - Embedding style : HTML의 head 요소 내부에 style 요소로 CSS를 작성하는 방법 >> 해당 문서에서 단독적으로 사용되는 스타일(Link style을 덮어씌워서)
+            - Link style : HTML 외부에 있는 CSS 파일을 로드해서 사용하는 방법 >> 공통적으로 사용되는 스타일, signiture style
+            !- * 적용 우선순위 : Inline > Embedding > Link *
     -->
 
     <!-- Link style -->
-
+    <link rel="stylesheet" href="./style.css" />
     <!-- Embedding style -->
-
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
     <!--
         Reset CSS : 
-            - 
-            - 
+            - 모든 웹 브라우저는 각자 서로 다른 기본 스타일을 가지고 있어서 CSS 수정 없이 사용할 때 서로 다르게 나타남
+            - Reset CSS를 사용하여 HTML의 기본 스타일을 제거하고 사용하여 브라우저 간 스타일 일관성을 유지할 수 있음
     -->
+    <link rel="stylesheet" href="./reset.css" />
+
 </head>
 <body>
-    <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
+    <h1 style="color: aquamarine;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h1>
     <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
     <!-- Inline style -->
     <h3 style="color: green;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h3>
