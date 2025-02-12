@@ -11,13 +11,30 @@
             margin: 0px;
         }
 
+        html {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         /* https://img.khan.co.kr/news/2023/04/26/news-p.v1.20230426.51aacdb51c6c4dfb8fb119cc062887fd_P1.jpg */
 
         /*
             background-position 속성 :
-                - 
+                - 배경 이미지가 표시될 위치 지정 (기본값은 좌측 상단)
         */
+        .background-position {
+            width: 100vw;
+            height: 100vh;
 
+            background-image: url('https://img.khan.co.kr/news/2023/04/26/news-p.v1.20230426.51aacdb51c6c4dfb8fb119cc062887fd_P1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
 
 
         
