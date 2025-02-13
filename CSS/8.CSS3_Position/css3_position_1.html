@@ -45,27 +45,63 @@
             width: 200px;
             height: 200px;
             background-color: rgba(255, 0, 0, 0.8);
-            top: 20px;
-            right: 20px;
+            top: 25px;
+            left: 25px;
         }
 
         /*
             absolute :
-                - 
-                - 
-                - 
+                - 부모 또는 가장 가까이에 있는 상위 요소(위치가 명시되어 있는)를 기준으로 top, left, right, bottom 속성 만큼 이동
+                - 모든 상위요소가 static으로 지정되어 있으면 body를 기준으로 배치
+                - absolute 선언 시 block 요소의 너비가 컨텐츠의 너비를 따라감
         */
-        
+        .absolute-item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 0, 255, 0.8);
+            top: 25px;
+            left: 25px;
+        }
 
+        .relative-parent {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
 
         /*
             fixed : 
-                - 
-                - 
-                - 
+                - 상위 요소와 관계없이 viewport 기준으로 top, left, right, bottom 속성 값만큼 이동
+                - 스크롤 되어라도 화면에 고정되어 있음
+                - fixed 선언 시 block 요소의 너비가 컨텐츠의 너비를 따라감
         */
-        
+        .fixed-item {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(0, 255, 0, 0.5);
+            bottom: 100px;
+            right: 100px;
+        }
 
+        /*
+            sticky :
+                - 본인의 위치에 존재하다가 화면상에서 벗어나면 지정된 위치에 고정됨
+        */
+        .container {
+            height: 2000px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .sticky-box {
+            position: sticky;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 0, 0.8);
+            top: 50px;
+        }
 
     </style>
 
@@ -100,8 +136,9 @@
     </div>
     <br />
     <div class="relative-parent">
+        relative parent
         <div class="relative-item">
-            relative box
+            relative box<br />relative box
             <div class="absolute-item">
                 absolute box
             </div>
@@ -110,7 +147,7 @@
 
     <hr />
 
-    <h3>Absolute position</h3>
+    <h3>Fixed position</h3>
 
     <div class="relative-parent">
         <div class="relative-item">
@@ -118,6 +155,16 @@
             <div class="fixed-item">
                 fixed box
             </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <h3>Sticky position</h3>
+
+    <div class="container">
+        <div class="sticky-box">
+            sticky box
         </div>
     </div>
 
