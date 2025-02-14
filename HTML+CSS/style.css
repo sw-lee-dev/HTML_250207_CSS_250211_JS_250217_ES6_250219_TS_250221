@@ -136,7 +136,7 @@ body {
 }
 
 .button {
-    padding: 16px 0;
+    padding: 21px 0;
     background-color: #17191d;
     color: #ffffff;
     font-size: 18px;
@@ -163,7 +163,7 @@ body {
 .link-item {
     color: #737381;
     font-weight: 700;
-    letter-spacing: -.6px;
+    letter-spacing: -0.6px;
     font-size: 12px;
 }
 
@@ -181,4 +181,70 @@ body {
 .security-link:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.security-link::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #0077ff;
+    margin: 0 2px -3px 0;
+}
+
+.sns-container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sns-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px solid #d2d6e0;
+    border-radius: 2px;
+    padding-left: 8px;
+
+    color: #51555d;
+}
+
+.sns-box:hover {
+    background-color: #9fa1a7;
+    color:  #ffffff;
+    cursor: pointer;
+}
+
+.sns-text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.sns-icon {
+    width: 22px;
+    height: 22px;
+
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+.facebook {
+    background-image: url('./images/facebook.png');
+}
+
+.google {
+    background-image: url('./images/google.png');
+}
+
+.naver {
+    background-image: url('./images/naver.png');
+}
+
+.apple {
+    background-image: url('./images/apple.png');
 }
