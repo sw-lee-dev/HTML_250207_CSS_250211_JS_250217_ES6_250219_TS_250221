@@ -9,23 +9,31 @@
 
         /*
             Grid : 
-                - 
-                - 
+                - 2차원(행과 열) 레이아웃 시스템을 제공하여 복잡한 레이아웃 구성을 쉽게 할 수 있음
+                - 1차원 레이아웃은 flexbox가 유용하고 2차원 레이아웃은 grid가 유용
         */
 
         /*
-            Grid Container 속성 : 
+            Grid Container 속성 : grid item을 가지는 부모 요소, display에 grid 혹은 inline-grid로 지정 가능
         */
-
-
+        .grid-container {
+            display: grid;
+        }
 
         /*
-            grid-template-columns 속성 : 
-            grid-template-rows 속성 : 
-            grid-template-areas 속성 : 
+            grid-template-columns 속성 : grid의 열의 크기와 갯수를 지정
+            grid-template-rows 속성 : grid의 행의 크기와 갯수를 지정
+            grid-template-areas 속성 : grid의 각 영역에 대해 이름을 부여하고 그룹화
         */
-
-
+        .grid-template-columns-rows {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 200px 300px;
+            grid-template-areas: 
+                "header header header"
+                "main main side"
+                "footer footer footer"
+            ;
+        }
         
         /*
             grid-template 속성 : 
