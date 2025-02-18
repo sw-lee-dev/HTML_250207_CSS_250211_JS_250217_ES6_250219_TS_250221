@@ -73,6 +73,7 @@ console.log('==============================');
 // newFruits[0] = '사과';
 // console.log(fruits);
 
+// 배열 복사 방법.1
 var newFruits = [];
 // for (var index = 0; index < fruits.length; index++) {
 //     newFruits[index] = fruits[index];
