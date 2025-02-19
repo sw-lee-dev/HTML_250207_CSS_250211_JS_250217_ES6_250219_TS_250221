@@ -33,26 +33,45 @@
         console.log('==============================');
 
         /*
-            JSON.parse : 
+            JSON.parse() : JSON 형태의 문자열을 자바스크립트의 객체로 변환
         */
-        
-        
+        var stringJson = '{\"name\": \"이방원\", \"age\": 55}';
+        console.log(stringJson, typeof stringJson);
+
+        var object = JSON.parse(stringJson);
+        console.log(object, typeof object);        
 
         console.log('==============================');
 
         /*
             Fetch API
-            - 
-            - 
-            - 
-            - 
+            - HTTP 요청과 응답을 자바스크립트에서 접근하고 조작할 수 있도록 하는 인터페이스
+            - 비동기 함수
+            - fetch(url, options);
+            - fetch(url, options).then(콜백 함수).catch(콜백 함수);
         */
 
         /*
             Request
         */
-        
+        // fetch 함수는 기본적으로 GET Request를 보냄
+        fetch('http://127.0.0.1:5500/html/A_hello.html');
 
+        fetch('http://127.0.0.1:5500/html/A_hello.html', {
+            method: 'POST',
+            body: stringJson
+        });
+
+        /*
+            Response
+        */
+        var response = fetch('http://127.0.0.1:5500/html/A_hello.html');
+
+        response = fetch('http://127.0.0.1:5500/html/A_hello.html').then(function(response) {
+            console.log('fetch 작업!');
+            console.log(response.text());
+        });
+        console.log('fetch 작업 이후!');
 
         console.log('==============================');
 
