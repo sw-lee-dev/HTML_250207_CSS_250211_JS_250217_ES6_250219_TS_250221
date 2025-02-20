@@ -1,0 +1,214 @@
+@font-face {
+    font-family: 'NEXONLv1GothicRegular';
+    src: url('/ui-test/resource/font/NEXONLv1GothicRegular.ttf');
+}
+
+body {
+    font-family: 'NEXONLv1GothicRegular', sans-serif, serif;
+    color: #17191d;
+}
+
+.header {
+    position: fixed;
+    color: #ffffff;
+    background-color: #17191d;
+    width: 100%;
+    height: 31px;
+}
+
+.headerMsg {
+    box-sizing: border-box;
+    padding: 7px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    margin: 0 auto;
+    height: 100vh;
+    min-height: 819px;
+    width: 460px;
+}
+
+.footer {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9fa1a7;
+    padding-top: 32px;
+    height: 48px;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 120px;
+    height: 80px;
+}
+
+.logo {
+    height: 20px;
+
+    background-image: url('/ui-test/resource/image/nexon-logo.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 27%;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.tab-box {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-item {
+    box-sizing: border-box;
+    text-align: center;
+    width: 105px;
+    height: 34px;
+
+    color: #9fa1a7;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #e5e8eb;
+    line-height: 34px
+}
+
+.tab-item:hover {
+    color: #0077ff;
+    cursor: pointer;
+}
+
+.active {
+    color: #17191d;
+    border-bottom-width: 2px;
+    border-bottom-color: #17191d;
+}
+
+.active:hover {
+    color: #17191d;
+    cursor: default;
+}
+
+.auth-box {
+    padding-top: 40px;
+    height: 203px;
+}
+
+.auth-box > p {
+    font-size: 12px;
+    color: #737881;
+    text-align: center;
+    padding-bottom: 40px;
+    height: 17px;
+    letter-spacing: -0.6px;
+}
+
+.auth-box strong {
+    font-weight: bold;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding-bottom: 26px;
+}
+
+.input-box > input {
+    box-sizing: border-box;
+    padding: 18px 12px;
+    width: 100%;
+    height: 56px;
+
+    font-size: 16px;
+    font-weight: 700;
+    outline: 0;
+    background-color: #ffffff;
+    border: 1px solid #e5e8eb;
+}
+
+.input-box > input::placeholder {
+    color: #e5e8eb;
+}
+
+.input-box > input:focus {
+    border-color: #0077ff;
+    border-width: 2px;
+}
+
+.button {
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+    color: #ffffff;
+    background-color: #17191d;
+}
+
+.button:hover {
+    background-color: #0077ff;
+    cursor: pointer;
+}
+
+.guide-container {
+    margin-top: 68px;
+    border-top: 1px solid #e5e8eb;
+    padding-top: 20px;
+}
+
+.guide-items {
+    display: flex;
+    justify-content: space-between;
+    height: 17px;
+}
+
+.guide-item {
+    color: #737881;
+    font-size: 12px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+}
+
+.clickable {
+    color: #9fa1a7;
+}
+
+.clickable:hover {
+    color: #0077ff;
+    cursor: pointer;
+}
+
+.guide-lists {
+    padding-top: 10px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.guide-list {
+    color: #9fa1a7;
+    text-align: left;
+    letter-spacing: -0.6px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 1.6;
+    list-style: none;
+}
