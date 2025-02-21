@@ -55,27 +55,51 @@ const funcType: (arg: string) => string = (arg: string): string => {
 
 /*
     타입추론 :
-    - 
+    - 타입을 선언하지 않고 변수에 값이 초기화되는 순간에 초기화된 데이터의 타입으로 결정되는 것
 */
-
-
+let str = '문자열';
+// str = 10; error
 
 /*
     타입 변환 :
-    - 
+    - as 키워드로 형변환 가능 (객체일때 자주 사용), <> 연산자로 형변환 가능
 */
+const PI: any = '3.14';
+let pi: string = PI as string;
+pi = <string>PI;
 
-
+String(PI);
 
 /*
     유니온 타입
-    - 
+    - 복수의 타입을 지정하는 방법, | 사용
 */
+let union: string | number;
+union = 10;
+union = '10';
+// union = false;
 
+const func3 = (): string | number => {
+    const a = 0;
+    if (a > 0) return '양수';
+    else if (a < 0) return '음수';
+    else return 0;
+};
 
+let obj: {
+    name: string,
+    age: number
+} | null = {
+    name: '홍길동',
+    age: 30
+};
+
+obj = null;
 
 /*
     리터럴 타입
-    - 
+    - 지정한 리터럴만 가질 수 있는 타입
 */
-
+let day: 'am' | 'pm';
+day = 'am';
+// day = 'AM';
