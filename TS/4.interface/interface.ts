@@ -45,7 +45,7 @@ interface Human2 extends King {
 }
 
 interface KingHuman extends King, Human {
-    // 자바에서나 쓰는 완벽한 객체지향적인 방법 >> 타임스크립트에서는 완벽하게 X
+    // 자바에서나 쓰는 완벽한 객체지향적인 방법 >> 타입스크립트에서는 완벽하게 X
 }
 
 // & : intersection(교집함)으로 기본 타입에는 사용 불가
